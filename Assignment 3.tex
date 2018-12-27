@@ -1,0 +1,107 @@
+\documentclass{report}
+\usepackage{amssymb,latexsym,amsmath,array}
+\usepackage{graphicx}
+\setlength{\oddsidemargin}{-.5in}
+\setlength{\evensidemargin}{-.5in} 
+\setlength{\textwidth}{7in}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{notation}{Notation}
+\addtolength{\topmargin}{-1.5in}
+\addtolength{\textheight}{1.5in}
+
+\begin{document}
+\begin{center}
+\textbf{M. Steven Towns}\\
+Assignment \# 3\\
+\today\\
+Linear Algebra\\
+
+\end{center}
+\hrulefill
+
+$\newline$
+\section*{Problem 6:}
+Let $A$ be an $m\times n$ matrix and 
+$
+	B =  
+	\begin{bmatrix}
+		b_{1}\\
+		b_{2}\\
+		\vdots \\
+		b_{n}
+	\end{bmatrix}$, an $n\times 1$ matrix. 
+	Prove that $AB = \sum\limits_{i=1}^n b_jA_j$, where $Aj$ is the $j$th row of $A$.
+
+$\newline$$\newline$		
+\begin{center}
+	$
+		AB = b_1A_1 + b_2A_2 + \hdots + b_nA_n
+	$
+\end{center}
+\begin{center}
+	$
+		= b_1
+			\begin{bmatrix}
+				a_{11}\\
+				a_{12}\\
+				\vdots \\
+				a_{1m}
+			\end{bmatrix}
+		+ b_2
+			\begin{bmatrix}
+				a_{21}\\
+				a_{22}\\
+				\vdots \\
+				a_{2m}
+			\end{bmatrix}
+		+ \hdots
+		+ b_n
+			\begin{bmatrix}
+				a_{n1}\\
+				a_{n2}\\
+				\vdots \\
+				a_{nm}
+			\end{bmatrix}
+	$
+	\end{center}
+	\begin{center}
+	$
+		=\begin{bmatrix}
+				b_1a_{11}\\
+				b_1a_{12}\\
+				\vdots \\
+				b_1a_{1m}
+		\end{bmatrix}
+		+\begin{bmatrix}
+				b_2a_{21}\\
+				b_2a_{22}\\
+				\vdots \\
+				b_2a_{2m}
+		\end{bmatrix}
+		+\hdots
+		+\begin{bmatrix}
+				b_na_{n1}\\
+				b_na_{n2}\\
+				\vdots \\
+				b_na_{nm}
+		\end{bmatrix}
+	$
+\end{center}
+\begin{center}
+	$
+		=\begin{bmatrix}
+				b_1a_{11} & b_2a_{21} & \hdots & b_na_{n1}\\
+				b_1a_{12} & b_2a_{22} & \hdots & b_na_{n2}\\
+				\vdots & \vdots &  & \vdots\\
+				b_1a_{1m} & b_2a_{2m} & \hdots & b_na_{nm}
+		\end{bmatrix}
+	$
+	$
+		= \sum\limits_{i=1}^n b_jA_j
+	$
+\end{center}
+
+
+
+\end{document}

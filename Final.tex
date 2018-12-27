@@ -1,0 +1,315 @@
+\documentclass{report}
+\usepackage{amssymb,latexsym,amsmath,array}
+\usepackage{graphicx}
+\setlength{\oddsidemargin}{-.45in}
+\setlength{\evensidemargin}{-.45in} 
+\setlength{\textwidth}{7in}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{notation}{Notation}
+\addtolength{\topmargin}{-1.5in}
+\addtolength{\textheight}{1.5in}
+
+\begin{document}
+\begin{center}
+\textbf{M. Steven Towns}\\
+Final Proofs\\
+\today\\
+Linear Algebra\\
+
+\end{center}
+\hrulefill
+\section*{Theorem 5.2}
+if matrix $B$ results from matrix $A$ by interchanging two rows(columns) of $A$, then $|B|=-|A|$. 
+\begin{center}
+$ 	A=
+	\begin{bmatrix}
+		a_{11} & a_{12} & a_{13}\\
+		a_{21} & a_{22} & a_{23}\\
+		a_{31} & a_{32} & a_{33}
+	\end{bmatrix}	
+$
+$	B=
+	\begin{bmatrix}
+		a_{11} & a_{12} & a_{13}\\
+		a_{31} & a_{32} & a_{33}\\
+		a_{21} & a_{22} & a_{23}
+	\end{bmatrix}
+$
+\end{center}
+\begin{center}
+$|B|=-|A| \iff |A|+|B|=0$
+\end{center}
+\begin{center}
+$	|A|=
+	\begin{vmatrix}
+		a_{11} & a_{12} & a_{13}\\
+		a_{21} & a_{22} & a_{23}\\
+		a_{31} & a_{32} & a_{33}
+	\end{vmatrix}
+$
+\end{center}
+\begin{center}
+$
+	|A|=+(a_{11})(a_{22})(a_{33})+(a_{12})(a_{23})(a_{31})+(a_{13})(a_{21})(a_{32})	
+	-(a_{31})(a_{22})(a_{13})-(a_{32})(a_{23})(a_{11})-(a_{33})(a_{21})(a_{12})
+$
+\end{center}
+\begin{center}
+$
+	|A|=+(a_{11})(a_{22})(a_{33})+(a_{12})(a_{23})(a_{31})+(a_{13})(a_{21})(a_{32})
+	-(a_{13})(a_{22})(a_{31})-(a_{11})(a_{23})(a_{32})-(a_{12})(a_{21})(a_{33})
+$
+\end{center}
+\vspace{5mm}
+\begin{center}
+$	|B|=
+	\begin{vmatrix}
+		a_{11} & a_{12} & a_{13}\\
+		a_{31} & a_{32} & a_{33}\\
+		a_{21} & a_{22} & a_{23}
+	\end{vmatrix}
+$
+\end{center}
+\begin{center}
+$
+	|B|=+(a_{11})(a_{32})(a_{23})+(a_{12})(a_{33})(a_{21})+(a_{13})(a_{31})(a_{22})
+	-(a_{21})(a_{32})(a_{13})-(a_{22})(a_{33})(a_{11})-(a_{23})(a_{31})(a_{12})
+$
+\end{center}
+\begin{center}
+$
+	|B|=+(a_{11})(a_{23})(a_{32})+(a_{12})(a_{21})(a_{33})+(a_{13})(a_{22})(a_{31})
+	-(a_{13})(a_{21})(a_{32})-(a_{11})(a_{22})(a_{33})-(a_{12})(a_{23})(a_{31})
+$
+\end{center}
+\begin{center}
+$
+	|B|=-(a_{13})(a_{21})(a_{32})-(a_{11})(a_{22})(a_{33})-(a_{12})(a_{23})(a_{31})
+	+(a_{11})(a_{23})(a_{32})+(a_{12})(a_{21})(a_{33})+(a_{13})(a_{22})(a_{31})
+$
+\end{center}
+\begin{center}
+$
+	|B|=-(a_{11})(a_{22})(a_{33})-(a_{12})(a_{23})(a_{31})-(a_{13})(a_{21})(a_{32})
+	+(a_{13})(a_{22})(a_{31})+(a_{11})(a_{23})(a_{32})+(a_{12})(a_{21})(a_{33})
+$
+\end{center}
+\vspace{10mm}
+\begin{center}
+$
+|A|+|B|=
+$
+\end{center}
+\vspace{-5mm}
+\begin{center}
+$
+	[+(a_{11})(a_{22})(a_{33})+(a_{12})(a_{23})(a_{31})+(a_{13})(a_{21})(a_{32})
+	-(a_{13})(a_{22})(a_{31})-(a_{11})(a_{23})(a_{32})-(a_{12})(a_{21})(a_{33})]
+$
+\end{center}
+\vspace{-5mm}
+\begin{center}
+$ +$
+\end{center}
+\vspace{-5mm}
+\begin{center}
+$
+	[-(a_{11})(a_{22})(a_{33})-(a_{12})(a_{23})(a_{31})-(a_{13})(a_{21})(a_{32})
+	+(a_{13})(a_{22})(a_{31})+(a_{11})(a_{23})(a_{32})+(a_{12})(a_{21})(a_{33})]
+$
+\end{center}
+\begin{center}
+$
+	=0
+$
+\end{center}
+
+\vspace{-1mm}
+\begin{center}
+	$\therefore|A| = -|B|$ 
+\end{center}
+
+
+
+
+
+
+
+
+\pagebreak
+\section*{Theorem 5.6}
+If $B=[b_{ij}]$ is obtained from $A=[a_{ij}]$ by adding to each element of the $r^{th}$ row (column) of $A$, $c$  times the corresponding element of the $s^{th}$ row (column), $r \neq s$, of $A$, then $|A|$=$|B|$.
+
+\begin{center}
+$ 	A=
+	\begin{bmatrix}
+		a_{11} & a_{12} & a_{13}\\
+		a_{21} & a_{22} & a_{23}\\
+		a_{31} & a_{32} & a_{33}
+	\end{bmatrix}	
+$
+$ 	B=
+	\begin{bmatrix}
+		a_{11} & a_{12} & a_{13}\\
+		a_{21}+ca_{31} & a_{22}+ca_{32} & a_{23}+ca_{33}\\
+		a_{31} & a_{32} & a_{33}
+	\end{bmatrix}	
+$
+\end{center}
+\begin{center}
+$	|A|=
+	\begin{vmatrix}
+		a_{11} & a_{12} & a_{13}\\
+		a_{21} & a_{22} & a_{23}\\
+		a_{31} & a_{32} & a_{33}
+	\end{vmatrix}
+$
+\end{center}
+\begin{center}
+$
+	|A|=(a_{11})(a_{22})(a_{33})+(a_{12})(a_{23})(a_{31})+(a_{13})(a_{21})(a_{32})	
+$
+\\
+$
+	-(a_{31})(a_{22})(a_{13})-(a_{32})(a_{23})(a_{11})-(a_{33})(a_{21})(a_{12})
+$
+\end{center}
+\begin{center}
+$	|B|=
+	\begin{vmatrix}
+		a_{11} 			& a_{12} 			& a_{13}\\
+		a_{21}+ca_{31} 	& a_{22}+ca_{32} 	& a_{23}+ca_{33}\\
+		a_{31} 			& a_{32} 			& a_{33}
+	\end{vmatrix}
+$
+\end{center}
+\begin{center}
+$
+|B|=(a_{11})(a_{22}+ca_{32})(a_{33})+(a_{12})(a_{23}+ca_{33})(a_{31})+(a_{13})(a_{21}+ca_{31})(a_{32})
+$
+\\
+$
+-(a_{31})(a_{22}+ca_{32})(a_{13})-(a_{32})(a_{23}+ca_{33})(a_{11})-(a_{33})(a_{21}+ca_{31})(a_{12})
+$
+\end{center}
+\begin{center}
+$=$
+\end{center}
+\begin{center}
+$
+(a_{11})(a_{33})(a_{22}+ca_{32})+(a_{12})(a_{31})(a_{23}+ca_{33})+(a_{13})(a_{32})(a_{21}+ca_{31})
+$
+\\
+$
+-(a_{31})(a_{13})(a_{22}+ca_{32})-(a_{32})(a_{11})(a_{23}+ca_{33})-(a_{33})(a_{12})(a_{21}+ca_{31})
+$
+\end{center}
+\begin{center}
+$=$
+\end{center}
+\begin{center}
+$
+[(a_{11})(a_{33})(a_{22})+(ca_{32})(a_{11})(a_{33})]
++[(a_{12})(a_{31})(a_{23})+(ca_{33})(a_{12})(a_{31})]
++[(a_{13})(a_{32})(a_{21})+(ca_{31})(a_{13})(a_{32})]
+$
+\\
+$
+-[(a_{31})(a_{13})(a_{22})+(ca_{32})(a_{31})(a_{13})]
+-[(a_{32})(a_{11})(a_{23})+(ca_{33})(a_{32})(a_{11})]
+-[(a_{33})(a_{12})(a_{21})+(ca_{31})(a_{33})(a_{12})]
+$
+\end{center}
+\begin{center}
+$=$
+\end{center}
+\begin{center}
+$
+(a_{11})(a_{22})(a_{33})+(c)(a_{11})(a_{32})(a_{33})
++(a_{12})(a_{23})(a_{31})+(c)(a_{12})(a_{31})(a_{33})
++(a_{13})(a_{21})(a_{32})+(c)(a_{13})(a_{31})(a_{32})
+$
+\\
+$
+-(a_{11})(a_{23})(a_{32})-(c)(a_{13})(a_{31})(a_{32})
+-(a_{11})(a_{23})(a_{32})-(c)(a_{11})(a_{32})(a_{33})
+-(a_{12})(a_{21})(a_{33})-(c)(a_{12})(a_{31})(a_{33})
+$
+\end{center}
+\begin{center}
+$=$
+\end{center}
+\begin{center}
+$
+[(c)(a_{11})(a_{32})(a_{33})-(c)(a_{11})(a_{32})(a_{33})]
++[(c)(a_{12})(a_{31})(a_{33})-(c)(a_{12})(a_{31})(a_{33})]
++[(c)(a_{13})(a_{31})(a_{32})-(c)(a_{13})(a_{31})(a_{32})]
+$
+\\
+$
++(a_{11})(a_{22})(a_{33})+(a_{12})(a_{23})(a_{31})+(a_{13})(a_{21})(a_{32})
+-(a_{11})(a_{23})(a_{32})-(a_{11})(a_{23})(a_{32})-(a_{12})(a_{21})(a_{33})
+$
+\end{center}
+\begin{center}
+$=$
+\end{center}
+\begin{center}
+$
+	(a_{11})(a_{22})(a_{33})+(a_{12})(a_{23})(a_{31})+(a_{13})(a_{21})(a_{32})	
+$
+\\
+$
+	-(a_{31})(a_{22})(a_{13})-(a_{32})(a_{23})(a_{11})-(a_{33})(a_{21})(a_{12})
+$
+\end{center}
+\begin{center}
+$=$
+\end{center}
+\begin{center}
+$
+|A|
+$
+\end{center}
+
+
+
+\pagebreak
+\section*{Theorem 5.8}
+If $A$ is an $n \times n$ matrix, then $A$ is nonsigular if and only if $|A| \neq 0$.
+\\
+\\
+let $(E_n)$ be an elementary matrix
+\\
+\\
+if $A$ is nonsingular, then $A$ is the product of elementary matrices : By Theorem 1.16
+\\
+$
+|E_1| \neq 0 \implies |E_1|*|E_2|*\hdots*|E_n| \neq 0$ : By 
+Definition 1.13 and Theorem  5.7
+\\ $
+\therefore |A| \neq 0
+$ 
+\begin{center}
+\end{center}
+if $A$ is singular, then $A$ is row equivalent to a matrix $B$ that contains a row of zeroes. : By Theorem 1.18\\
+$|B| = 0 $ : By Theorem 5.3\\
+if $A$ is row equivalent to $B \implies A=(E_1)*(E_2)*\hdots*(E_n)*(B)\\
+|A| = |E_1|*|E_2|*\hdots*|E_n|*|B|
+\\
+\therefore |A|=0
+$
+ 
+ 
+\pagebreak
+\section*{Corollary 5.3}
+If $A$ is nonsingular, then $|A^{-1}|= \dfrac{1}{|A|}$.\\
+\\
+If $A$ is nonsingular $\implies A^{-1} $ exists : By Definition of Nonsingular\\
+$I_n =A*A^{-1}$\\
+$|I_n| = 1 $ : By Definition of Identity Matrix and Theorem 5.7\\
+$\implies |A*A^{-1}|=1\implies|A|*|A^{-1}|=1$ : By Theorem 5.9\\
+$\therefore |A^{-1}|= \dfrac{1}{|A|}$
+
+\end{document}

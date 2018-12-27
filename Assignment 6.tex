@@ -1,0 +1,75 @@
+\documentclass{report}
+\usepackage{amssymb,latexsym,amsmath,array}
+\usepackage{graphicx}
+\setlength{\oddsidemargin}{-.5in}
+\setlength{\evensidemargin}{-.5in} 
+\setlength{\textwidth}{7in}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{notation}{Notation}
+\addtolength{\topmargin}{-1.5in}
+\addtolength{\textheight}{1.5in}
+
+\begin{document}
+\begin{center}
+\textbf{M. Steven Towns}\\
+Assignment \# 2\\
+\today\\
+Linear Algebra\\
+
+\end{center}
+\hrulefill
+\section*{Proof:}
+Prove that
+$
+	\sum\limits_{j=1}^n \sum\limits_{i=1}^m(a_{ij})=
+	\sum\limits_{i=1}^m \sum\limits_{j=1}^n(a_{ij})
+$
+\\
+\begin{center}
+	Left:
+	\\
+	$
+		\sum\limits_{j=1}^n \sum\limits_{i=1}^m(a_{ij})=
+		$
+		\\
+		$
+		\sum\limits_{j=1}^n(a_{1j}+a_{2j}+\hdots+a_{mj})=
+	$
+\\
+	$
+		\begin{bmatrix}
+			a_{11} & a_{21} & \hdots & a_{m1}\\
+			a_{12} & a_{22} & \hdots & a_{m2}\\
+			\vdots & \vdots &  & \vdots\\
+			a_{1n} & a_{2n} & \hdots & a_{mn}
+		\end{bmatrix}
+	$
+\end{center}
+\begin{center}
+\end{center}
+\begin{center}
+	Right:\\
+	$
+		\sum\limits_{i=1}^m \sum\limits_{j=1}^n(a_{ij})=
+	$
+	\\
+	$
+		\sum\limits_{i=1}^n(a_{i1}+a_{i2}+\hdots+a_{in})=
+	$
+	\\
+	$
+		\begin{bmatrix}
+			a_{11} & a_{21} & \hdots & a_{m1}\\
+			a_{12} & a_{22} & \hdots & a_{m2}\\
+			\vdots & \vdots &  & \vdots\\
+			a_{1n} & a_{2n} & \hdots & a_{mn}
+		\end{bmatrix}
+	$\\
+	The two matrices are equal $\therefore $ 
+	$
+		\sum\limits_{j=1}^n \sum\limits_{i=1}^m(a_{ij})=
+		\sum\limits_{i=1}^m \sum\limits_{j=1}^n(a_{ij})
+	$
+\end{center}
+\end{document}

@@ -1,0 +1,116 @@
+\documentclass{report}
+\usepackage{amssymb,latexsym,amsmath,array}
+\usepackage{graphicx}
+\setlength{\oddsidemargin}{-.5in}
+\setlength{\evensidemargin}{-.5in} 
+\setlength{\textwidth}{7in}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{notation}{Notation}
+\addtolength{\topmargin}{-1.5in}
+\addtolength{\textheight}{1.5in}
+
+\begin{document}
+\begin{center}
+\textbf{M. Steven Towns}\\
+Assignment \# 2\\
+\today\\
+Linear Algebra\\
+
+\end{center}
+\hrulefill
+
+$\newline$
+
+\section*{Problem 25:}
+If $A = \bigl[ a_{ij} \bigr]$ is an $n \times m$ matrix, then the \textbf{trace} of $A$, $Tr(A)$, is defined as the sum of all the elements on the main diagonal of $A$, $Tr(A) = \sum_{i=1}^{n} a_{ii}$. Prove: 
+\newline
+\newline
+
+(a) $Tr(cA)=cTr(A)$, where $c$ is a real number. 
+	\begin{center}
+		$
+			\sum\limits_{i=1}^n (ca_{ii}) = ca_{11} + ca_{22} + \cdots + ca_{nn}
+		$
+	\end{center}
+	\begin{center}
+		$
+			= c(a_{11} + a_{22} + \cdots + a_{nn}) = c\sum\limits_{i=1}^n (a_{ii})
+		$
+	\end{center}
+
+(b) $Tr(A + B)=Tr(A) + Tr(B)$
+	\begin{center}
+		$
+			\sum\limits_{i=1}^n (a_{ii} + b_{ii}) = a_{11} + b_{11} + a_{22} + b_{22} + \cdots + a_{nn} + b_{nn}
+		$
+	\end{center}
+	\begin{center}
+		$
+			= (a_{11} + a_{22} + \cdots + a_{nn})+ (b_{11} + b_{22} + \cdots + b_{nn})
+		$
+	\end{center}
+	\begin{center}
+		$
+			= \sum\limits_{i=1}^n(a_{ii})+\sum\limits_{i=1}^n(b_{ii})
+		$
+	\end{center}
+
+(c) $Tr(AB)=Tr(BA)$
+	\begin{center}
+		$
+			\sum\limits_{i=1}^n\sum\limits_{i=1}^m(a_{im}b_{mi}) = \sum\limits_{i=1}^n(a_{11}b_{11} + a_{22}b_{22} + \cdots + a_{mm}b_{nn})
+		$
+	\end{center}
+
+	\begin{center}
+		$
+			= \sum\limits_{i=1}^n(b_{11}a_{11} + b_{22}a_{22} + \cdots + b_{nn}a_{mm}) = \sum\limits_{i=1}^n\sum\limits_{i=1}^m(b_{mi}a_{im})
+		$
+	\end{center}
+
+(d) $Tr(A^T)=Tr(A)$
+
+	\begin{center}
+		$
+			\sum\limits_{i=1}^{n}(a_{ii}) = a_{11} + a_{22} + \cdots + a_{nn}
+		$ 
+	\end{center}
+	\begin{center}
+		$
+			= (a_{11})^T + (a_{22})^T + \cdots + (a_{nn})^T = \sum\limits_{i=1}^n(a_{ii})^T
+		$ 
+	\end{center}
+
+
+(e) $Tr(A^TA) \geq 0$
+	\begin{center}
+		 $
+		 	Tr(A^T)=Tr(A) \therefore Tr(A^TA)=Tr(A^2)
+		 $
+	\end{center}
+	
+	\begin{center}
+		$Tr(A^2) = \sum\limits_{i=1}^n(a_{ii})^2$
+	\end{center}
+	
+	\begin{center}
+		$
+			\sum\limits_{i=1}^n(a_{ii})^2=(a_{11})^2 + (a_{22})^2 + \cdots + (a_{nn})^2
+		$
+	\end{center}
+	\begin{center}
+		$
+			a_{ii} \in \mathbb{R} \therefore (a_{ii})^2 \geq 0
+		$
+	\end{center}
+	\begin{center}
+		$
+			\therefore \sum\limits_{i=1}^n(a_{ii})^2 \geq 0
+		$
+	\end{center}
+	
+	
+
+
+\end{document}
